@@ -4,6 +4,33 @@ This repository is a simple demo testing the way how transactions behave in Spri
 
 You can check the behaviour by acessing these two endpoints:
 
+## Prequisities
+
+```
+Java 8
+Gradle
+
+```
+
+# Build and run
+
+```
+gradle build
+java -jar build/libs/exception-in-transaction-0.0.1-SNAPSHOT.jar
+
+```
+
+
+### Usage
+
+There are two endpoints you can access. You can use your browser, software like postman 
+or you can even do it from your terminal:
+
+```
+curl localhost:8080/book
+curl localhost:8080/ex
+```
+
 ## Endpoint /book
 The method BookService.getBooks() throws and catches an exception,
 Spring does not know about it, so the transaction succeeds.
