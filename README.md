@@ -18,7 +18,7 @@ java -jar build/libs/exception-in-transaction-0.0.1-SNAPSHOT.jar
 
 ```
 
-### Usage
+## Usage
 
 There are two endpoints you can access. You can use your browser, software like postman 
 or you can even do it from your terminal:
@@ -28,12 +28,12 @@ curl localhost:8080/book
 curl localhost:8080/ex
 ```
 
-## Endpoint /book
+### Endpoint /book
 The method BookService.getBooks() throws and catches an exception,
 Spring does not know about it, so the transaction succeeds.
 
 
-## Endpoint /ex
+### Endpoint /ex
 The method BookService.getBooksUnsafe() throws an exception and is 
 called from BookRequestDispatcher.getBooks(), which is also transctional. 
 It will fail, because the transaction will be marked as rollback only. 
